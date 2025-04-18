@@ -1,0 +1,39 @@
+.App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.social-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.social-card {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+.latest-posts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.latest-posts li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

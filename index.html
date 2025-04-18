@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Social Media Analytics</h1>
+
+        
+        <div class="social-cards">
+            <div class="social-card">
+                <h3>Followers</h3>
+                <p>2000</p>
+            </div>
+            <div class="social-card">
+                <h3>Posts</h3>
+                <p>120</p>
+            </div>
+            <div class="social-card">
+                <h3>Engagement Rate</h3>
+                <p>4.5%</p>
+            </div>
+        </div>
+
+       
+        <div class="chart-container">
+            <h3>Sentiment Analysis</h3>
+            <canvas id="sentimentChart"></canvas>
+        </div>
+
+        <div class="latest-posts">
+            <h3>Latest Posts</h3>
+            <ul>
+                <li>
+                    <h4>Post 1</h4>
+                    <p>Likes: 300</p>
+                    <p>Comments: 10</p>
+                </li>
+                <li>
+                    <h4>Post 2</h4>
+                    <p>Likes: 500</p>
+                    <p>Comments: 15</p>
+                </li>
+                <li>
+                    <h4>Post 3</h4>
+                    <p>Likes: 200</p>
+                    <p>Comments: 5</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+       
+        const sentimentData = {
+            labels: ['Positive', 'Neutral', 'Negative'],
+            datasets: [{
+                label: 'Sentiment Analysis',
+                data: [80, 15, 5], 
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: true
+            }]
+        };
+
+        
+        const ctx = document.getElementById('sentimentChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: sentimentData,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Sentiment Analysis'
+                    }
+                }
+            });
+    </script>
+</body>
+</html>
